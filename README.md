@@ -2,7 +2,7 @@
 
 A Sassy version of the much-loved [animate.css](https://github.com/daneden/animate.css). All the animations without the bloat <3
 
-**[https://curlybracketdev.github.io/animate-scss/](https://curlybracketdev.github.io/animate-scss/)**
+**[https://wcdogg.github.io/animate-scss/](https://wcdogg.github.io/animate-scss/)**
 
 ## Add to Workflow
 
