@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>animate.scss</title>
+    <style>
+        /* 
+        * This shows how Sass only compiles the included rules  
+        */
+
+        @-webkit-keyframes rubberBand {
+        from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+        }
+        40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+        }
+        50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+        }
+        65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+        }
+        75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+        }
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        }
+        @keyframes rubberBand {
+        from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+        }
+        40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+        }
+        50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+        }
+        65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+        }
+        75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+        }
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        }
+
+        /* 
+        * This shows how Sass can merge multiple rules,
+        * making even smaller CSS files.  
+        */
+        .demo--delay:hover, .demo--infinite:hover, 
+        .demo--once:hover {
+            -webkit-animation-name: rubberBand;
+            animation-name: rubberBand;
+        }
+
+        .demo--once:hover {
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .demo--infinite:hover {
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+
+        .demo--delay:hover {
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-delay: 1000ms;
+            animation-delay: 1000ms;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+
+        /* 
+        * Demo styles - safe to ignore
+        */
+        .demo--title {
+            font-size: 32px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .demo--grid {
+            display: grid;
+            max-width: 800px;
+            margin: 48px auto;
+            grid-template-columns: repeat(auto-fill, minmax(210px,1fr));
+            grid-gap: 64px;
+            justify-content: center;
+        }
+
+        .demo--once,
+        .demo--delay,
+        .demo--infinite {
+            height: 200px;
+            width: 200px;
+            color: #fff;
+            margin: auto;
+            font-size: 56px;
+            text-align: center;
+            background-color: #000;
+        }
+
+        .demo--once:hover { background-color: #6cc644; }
+        .demo--infinite:hover { background-color: orange; }
+        .demo--delay:hover { background-color: rgb(142, 36, 218); }
+
+        .demo--once p,
+        .demo--delay p,
+        .demo--infinite p {
+            margin: 0;
+            padding: 0;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body class="demo">
+
+<h1 class="demo--title">animate.scss</h1>
+
+<div class="demo--grid">
+
+    <div class="demo--once">
+        <p>once</p>
+    </div>
+
+    <div class="demo--infinite">
+        <p>infinite</p>
+    </div>
+
+    <div class="demo--delay">
+        <p>delay</p>
+    </div>
+
+</div>
+
+</body>
+</html>

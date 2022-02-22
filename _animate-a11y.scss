@@ -1,0 +1,19 @@
+//-------------------------------------------------------
+// This file contains rules that help improve the
+// user experience and with accessibility.
+// You're theme may already contain these rules, as
+// they are common CSS resets. 
+//-------------------------------------------------------
+
+html:focus-within { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
